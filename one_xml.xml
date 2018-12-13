@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="pdml2html.xsl"?>
+<!-- You can find pdml2html.xsl in /Applications/Wireshark.app/Contents/Resources/share/wireshark or at https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob_plain;f=pdml2html.xsl. -->
+<pdml version="0" creator="wireshark/2.0.4" time="Fri Nov  2 03:00:32 2018" capture_file="/Users/ashrithhc/Avatar/Bluetooth logs/mferd_btsnoop_hci.log">
+<packet>
+  <proto name="geninfo" pos="0" showname="General information" size="14">
+    <field name="num" pos="0" show="87" showname="Number" value="57" size="14"/>
+    <field name="len" pos="0" show="14" showname="Frame Length" value="e" size="14"/>
+    <field name="caplen" pos="0" show="14" showname="Captured Length" value="e" size="14"/>
+    <field name="timestamp" pos="0" show="Jan 15, 1970 15:37:52.238457000 EST" showname="Captured Time" value="1283872.238457000" size="14"/>
+  </proto>
+  <proto name="frame" showname="Frame 87: 14 bytes on wire (112 bits), 14 bytes captured (112 bits)" size="14" pos="0">
+    <field name="frame.encap_type" showname="Encapsulation type: Bluetooth H4 with linux header (99)" size="0" pos="0" show="99"/>
+    <field name="frame.time" showname="Arrival Time: Jan 15, 1970 15:37:52.238457000 EST" size="0" pos="0" show="Jan 15, 1970 15:37:52.238457000 EST"/>
+    <field name="frame.offset_shift" showname="Time shift for this packet: 0.000000000 seconds" size="0" pos="0" show="0.000000000"/>
+    <field name="frame.time_epoch" showname="Epoch Time: 1283872.238457000 seconds" size="0" pos="0" show="1283872.238457000"/>
+    <field name="frame.time_delta" showname="Time delta from previous captured frame: 3.950540000 seconds" size="0" pos="0" show="3.950540000"/>
+    <field name="frame.time_delta_displayed" showname="Time delta from previous displayed frame: 3.950540000 seconds" size="0" pos="0" show="3.950540000"/>
+    <field name="frame.time_relative" showname="Time since reference or first frame: 24.482537000 seconds" size="0" pos="0" show="24.482537000"/>
+    <field name="frame.number" showname="Frame Number: 87" size="0" pos="0" show="87"/>
+    <field name="frame.len" showname="Frame Length: 14 bytes (112 bits)" size="0" pos="0" show="14"/>
+    <field name="frame.cap_len" showname="Capture Length: 14 bytes (112 bits)" size="0" pos="0" show="14"/>
+    <field name="frame.marked" showname="Frame is marked: False" size="0" pos="0" show="0"/>
+    <field name="frame.ignored" showname="Frame is ignored: False" size="0" pos="0" show="0"/>
+    <field name="frame.protocols" showname="Protocols in frame: bluetooth:hci_h4:bthci_acl:btl2cap:btatt" size="0" pos="0" show="bluetooth:hci_h4:bthci_acl:btl2cap:btatt"/>
+    <field name="frame.p2p_dir" showname="Point-to-Point Direction: Sent (0)" size="0" pos="0" show="0"/>
+  </proto>
+  <proto name="bluetooth" showname="Bluetooth" size="14" pos="0">
+    <field name="bluetooth.addr" showname="Source or Destination: 00:00:00_00:00:00 (00:00:00:00:00:00)" hide="yes" size="0" pos="0" show="00:00:00:00:00:00"/>
+    <field name="bluetooth.src" showname="Source: 00:00:00_00:00:00 (00:00:00:00:00:00)" size="0" pos="0" show="00:00:00:00:00:00"/>
+    <field name="bluetooth.addr" showname="Source or Destination: 00:00:00_00:00:00 (00:00:00:00:00:00)" hide="yes" size="0" pos="0" show="00:00:00:00:00:00"/>
+    <field name="bluetooth.dst" showname="Destination: 00:00:00_00:00:00 (00:00:00:00:00:00)" size="0" pos="0" show="00:00:00:00:00:00"/>
+  </proto>
+  <proto name="hci_h4" showname="Bluetooth HCI H4" size="1" pos="0">
+    <field name="hci_h4.direction" showname="Direction: Sent (0x00)" size="0" pos="0" show="0x00000000"/>
+    <field name="hci_h4.type" showname="HCI Packet Type: ACL Data (0x02)" size="1" pos="0" show="0x00000002" value="02"/>
+  </proto>
+  <proto name="bthci_acl" showname="Bluetooth HCI ACL Packet" size="13" pos="1">
+    <field name="bthci_acl.chandle" showname=".... 0000 0100 0000 = Connection Handle: 0x0040" size="2" pos="1" show="0x00000040" value="40" unmaskedvalue="4000"/>
+    <field name="bthci_acl.pb_flag" showname="..00 .... .... .... = PB Flag: First Non-automatically Flushable Packet (0)" size="2" pos="1" show="0" value="0" unmaskedvalue="4000"/>
+    <field name="bthci_acl.bc_flag" showname="00.. .... .... .... = BC Flag: Point-To-Point (0)" size="2" pos="1" show="0" value="0" unmaskedvalue="4000"/>
+    <field name="bthci_acl.length" showname="Data Total Length: 9" size="2" pos="3" show="9" value="0900"/>
+    <field name="_ws.expert" showname="Expert Info (Error/Protocol): Frame is out of any &quot;connection handle&quot; session" size="0" pos="1">
+      <field name="bthci_acl.invalid_session" showname="Frame is out of any &quot;connection handle&quot; session" size="0" pos="0" show="" value=""/>
+      <field name="_ws.expert.message" showname="Message: Frame is out of any &quot;connection handle&quot; session" hide="yes" size="0" pos="0" show="Frame is out of any &quot;connection handle&quot; session"/>
+      <field name="_ws.expert.severity" showname="Severity level: Error" size="0" pos="0" show="0x00800000"/>
+      <field name="_ws.expert.group" showname="Group: Protocol" size="0" pos="0" show="0x09000000"/>
+    </field>
+    <field name="bthci_acl.src.bd_addr" showname="Source BD_ADDR: 00:00:00_00:00:00 (00:00:00:00:00:00)" size="0" pos="1" show="00:00:00:00:00:00"/>
+    <field name="bthci_acl.src.name" showname="Source Device Name: " size="0" pos="1" show=""/>
+    <field name="bthci_acl.src.role" showname="Source Role: Unknown (0)" size="0" pos="1" show="0"/>
+    <field name="bthci_acl.dst.bd_addr" showname="Destination BD_ADDR: 00:00:00_00:00:00 (00:00:00:00:00:00)" size="0" pos="1" show="00:00:00:00:00:00"/>
+    <field name="bthci_acl.dst.name" showname="Destination Device Name: " size="0" pos="1" show=""/>
+    <field name="bthci_acl.dst.role" showname="Destination Role: Unknown (0)" size="0" pos="1" show="0"/>
+    <field name="bthci_acl.mode" showname="Current Mode: Unknown (-1)" size="0" pos="1" show="-1"/>
+  </proto>
+  <proto name="btl2cap" showname="Bluetooth L2CAP Protocol" size="9" pos="5">
+    <field name="btl2cap.length" showname="Length: 5" size="2" pos="5" show="5" value="0500"/>
+    <field name="btl2cap.cid" showname="CID: Attribute Protocol (0x0004)" size="2" pos="7" show="4" value="0400"/>
+  </proto>
+  <proto name="btatt" showname="Bluetooth Attribute Protocol" size="5" pos="9">
+    <field name="btatt.opcode" showname="Opcode: Write Request (0x12)" size="1" pos="9" show="0x00000012" value="12">
+      <field name="btatt.opcode.authentication_signature" showname="0... .... = Authentication Signature: False" size="1" pos="9" show="0" value="0" unmaskedvalue="12"/>
+      <field name="btatt.opcode.command" showname=".0.. .... = Command: False" size="1" pos="9" show="0" value="0" unmaskedvalue="12"/>
+      <field name="btatt.opcode.method" showname="..01 0010 = Method: Write Request (0x12)" size="1" pos="9" show="0x00000012" value="12" unmaskedvalue="12"/>
+    </field>
+    <field name="btatt.handle" showname="Handle: 0x0030" size="2" pos="10" show="0x00000030" value="3000"/>
+    <field name="btatt.value" showname="Value: 0100" size="2" pos="12" show="01:00" value="0100"/>
+  </proto>
+</packet>
+</pdml>
