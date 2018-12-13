@@ -1,5 +1,6 @@
 import sys
 import pexpect
+from gattlib import GATTRequester
 
 def makeConnection(self, DEVICE):
     print("Connecting to:"),
@@ -21,6 +22,14 @@ def makeConnection(self, DEVICE):
         else:
             print("Connected!")
             break
+
+def write_data(self, DEVICE, service, data):
+    req = GATTRequester(DEVICE)
+    try:
+        req.write_by_handle(service, str(data))
+        print ("Data was written")
+    except:
+        print ("Write error")
 
 def __init__(self):
     DEVICE = "AC:9A:22:91:67:58"
